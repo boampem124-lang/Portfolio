@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Portfolio — Your Name</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container">
+        <a class="brand" href="#">Your Name</a>
+        <div class="nav-actions">
+          <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero container">
+        <h1>Hi, I'm Your Name.</h1>
+        <p class="lead">A developer who builds clean, accessible web experiences.</p>
+        <p><a class="cta" href="#projects">See my work</a></p>
+      </section>
+
+      <section id="projects" class="projects container">
+        <h2>Projects</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Project One</h3>
+            <p>Short description of project one.</p>
+            <p><a href="#">View</a></p>
+          </article>
+          <article class="card">
+            <h3>Project Two</h3>
+            <p>Short description of project two.</p>
+            <p><a href="#">View</a></p>
+          </article>
+          <article class="card">
+            <h3>Project Three</h3>
+            <p>Short description of project three.</p>
+            <p><a href="#">View</a></p>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="about container">
+        <h2>About</h2>
+        <p>Write a short bio here — skills, interests, and what you're looking for.</p>
+      </section>
+
+      <section id="contact" class="contact container">
+        <h2>Contact</h2>
+        <form id="contact-form">
+          <label>
+            Your email
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="4" required></textarea>
+          </label>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">© <span id="year"></span> Your Name</div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>

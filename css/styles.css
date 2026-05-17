@@ -1,0 +1,42 @@
+:root{
+  --bg:#ffffff;
+  --text:#0b0b0b;
+  --muted:#586069;
+  --accent:#0a84ff;
+  --card:#f6f8fa;
+}
+
+[data-theme="dark"]{
+  --bg:#0b0b0f;
+  --text:#e6eef6;
+  --muted:#98a6b3;
+  --accent:#66b2ff;
+  --card:#0f1720;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.5;background:var(--bg);color:var(--text);margin:0}
+.container{max-width:960px;margin:0 auto;padding:2rem}
+.site-header{border-bottom:1px solid rgba(0,0,0,0.06)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 0}
+.brand{font-weight:700;text-decoration:none;color:var(--text)}
+#theme-toggle{background:none;border:1px solid transparent;padding:0.4rem 0.6rem;border-radius:6px;cursor:pointer}
+
+.hero{padding:4rem 0;text-align:left}
+.lead{color:var(--muted);max-width:60ch}
+.cta{display:inline-block;margin-top:1rem;padding:0.6rem 1rem;background:var(--accent);color:white;border-radius:8px;text-decoration:none}
+
+.projects .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem}
+.card{background:var(--card);padding:1rem;border-radius:8px;border:1px solid rgba(0,0,0,0.04)}
+.card h3{margin-top:0}
+
+.about,.contact{margin-top:2rem}
+form{display:grid;gap:0.75rem;max-width:540px}
+label{display:flex;flex-direction:column;font-size:0.95rem}
+input,textarea{padding:0.6rem;border-radius:6px;border:1px solid rgba(0,0,0,0.08);background:transparent;color:var(--text)}
+button[type=submit]{padding:0.6rem 1rem;border-radius:6px;border:0;background:var(--accent);color:white;cursor:pointer}
+
+.site-footer{border-top:1px solid rgba(0,0,0,0.06);padding:1rem 0;margin-top:3rem;text-align:center;color:var(--muted)}
+
+@media (max-width:640px){.container{padding:1rem}.hero{padding:2rem 0;text-align:center}.nav{gap:0.5rem}.brand{font-size:1rem}}
