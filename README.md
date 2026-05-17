@@ -36,6 +36,7 @@ Deployment notes:
 - Deploy the backend to a server or platform that supports webhooks (e.g., Railway, Heroku) and set the webhook URL in Stripe dashboard.
 - Deploy the frontend to Vercel, Netlify, or static hosting.
 - If using GitHub, the frontend is configured to deploy automatically via GitHub Pages from the `web/` directory when changes are pushed to `main`.
+- The frontend is now configured for the custom domain `affiliate-tasks-prototype.com` via `web/CNAME`.
 - A container-ready backend is available in `server/Dockerfile` and a simple local runtime is provided via `docker-compose.yml`.
 - The backend is also configured to build and publish a container image to GitHub Container Registry via `.github/workflows/backend-image.yml` on every push to `main`.
 - The backend can be deployed automatically to Fly.io using `.github/workflows/backend-fly-deploy.yml`; set `FLY_API_TOKEN` in GitHub Secrets and update `server/fly.toml` with your Fly app name.
