@@ -1,0 +1,7 @@
+app = "portfolio-server"
+primary_region = "iad"
+
+[build]
+  image = ""
+
+env = { NODE_ENV = "production" }

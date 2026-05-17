@@ -38,6 +38,7 @@ Deployment notes:
 - If using GitHub, the frontend is configured to deploy automatically via GitHub Pages from the `web/` directory when changes are pushed to `main`.
 - A container-ready backend is available in `server/Dockerfile` and a simple local runtime is provided via `docker-compose.yml`.
 - The backend is also configured to build and publish a container image to GitHub Container Registry via `.github/workflows/backend-image.yml` on every push to `main`.
+- The backend can be deployed automatically to Fly.io using `.github/workflows/backend-fly-deploy.yml`; set `FLY_API_TOKEN` in GitHub Secrets and update `server/fly.toml` with your Fly app name.
 - For the backend, set `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`, `JWT_SECRET`, and optionally SMTP variables in the environment.
 - Add proper authentication, rate-limiting, validation, KYC, AML, and legal disclaimers before taking real money.
 
