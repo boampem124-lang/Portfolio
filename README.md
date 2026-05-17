@@ -37,6 +37,7 @@ Deployment notes:
 - Deploy the frontend to Vercel, Netlify, or static hosting.
 - If using GitHub, the frontend is configured to deploy automatically via GitHub Pages from the `web/` directory when changes are pushed to `main`.
 - A container-ready backend is available in `server/Dockerfile` and a simple local runtime is provided via `docker-compose.yml`.
+- The backend is also configured to build and publish a container image to GitHub Container Registry via `.github/workflows/backend-image.yml` on every push to `main`.
 - For the backend, set `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`, `JWT_SECRET`, and optionally SMTP variables in the environment.
 - Add proper authentication, rate-limiting, validation, KYC, AML, and legal disclaimers before taking real money.
 
