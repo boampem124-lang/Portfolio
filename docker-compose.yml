@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+  affiliate-server:
+    build:
+      context: ./server
+    ports:
+      - '4000:4000'
+    environment:
+      - PORT=4000
+      - DATABASE_FILE=./data/db.sqlite
+      - FRONTEND_ORIGIN=http://localhost:3000
+      - USE_ETHEREAL=true
+    volumes:
+      - ./server/data:/app/data
+      - ./server/.preview-state.json:/app/.preview-state.json

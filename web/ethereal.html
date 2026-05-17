@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Email Preview (Ethereal)</title>
+    <style>body{font-family:system-ui,Arial;max-width:900px;margin:24px} a{display:block;margin-bottom:8px}</style>
+  </head>
+  <body>
+    <h1>Email Previews</h1>
+    <div id="list">Loading…</div>
+    <script>
+      async function load(){
+        try{
+          const res = await fetch('http://localhost:4000/api/dev/emails');
+          if (!res.ok) return document.getElementById('list').textContent = 'Not available';
+          const data = await res.json();
+          const container = document.getElementById('list');
+          container.innerHTML = '';
+          data.forEach(d => {
+            const el = document.createElement('div');
+            const a = document.createElement('a');
+            a.href = d.previewUrl;
+            a.target = '_blank';
+            a.textContent = `${new Date(d.timestamp).toLocaleString()} — ${d.subject} -> preview`;
+            el.appendChild(a);
+            container.appendChild(el);
+          });
+          if (data.length === 0) container.textContent = 'No previews yet';
+        }catch(e){
+          document.getElementById('list').textContent = 'Error fetching previews';
+        }
+      }
+      load();
+      setInterval(load, 5000);
+    </script>
+  </body>
+</html>

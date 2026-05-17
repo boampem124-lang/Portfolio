@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Affiliate Tasks Prototype</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main>
+      <h1>Affiliate Tasks Prototype</h1>
+      <section id="auth">
+        <h2>Register / Login</h2>
+        <div>
+          <input id="email" placeholder="email">
+          <input id="password" type="password" placeholder="password">
+          <button id="btnRegister">Register</button>
+          <button id="btnLogin">Login</button>
+          <button id="btnLogout">Logout</button>
+        </div>
+        <p id="userInfo"></p>
+        <div>
+          <button id="btnRequestVerify">Request verification email</button>
+        </div>
+      </section>
+
+      <section id="password-reset">
+        <h2>Password Reset</h2>
+        <div>
+          <input id="resetEmail" placeholder="your email">
+          <button id="btnRequestReset">Request password reset</button>
+        </div>
+        <div>
+          <input id="resetToken" placeholder="reset token">
+          <input id="resetNewPassword" type="password" placeholder="new password">
+          <button id="btnSubmitReset">Submit new password</button>
+        </div>
+      </section>
+
+      <section id="balance">
+        <h2>Balance</h2>
+        <div id="balanceVal">-</div>
+      </section>
+
+      <section id="tasks">
+        <h2>Daily Tasks</h2>
+        <ul id="taskList"></ul>
+      </section>
+
+      <section id="deposit">
+        <h2>Deposit (test)</h2>
+        <input id="amount" placeholder="amount in USD (e.g. 1)">
+        <button id="btnDeposit">Create deposit (Stripe)</button>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
